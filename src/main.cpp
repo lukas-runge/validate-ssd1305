@@ -11,7 +11,7 @@ spi_inst_t *spi = spi1;
 
 void Write_command(uint8_t command) {
     gpio_put(CS_PIN, 0);
-    spi_write_blocking(spi, &command, 2);
+    spi_write_blocking(spi, &command, 1);
     gpio_put(CS_PIN, 1);
 }
 
